@@ -25,12 +25,12 @@ jobs:
               run: npm install
             
             - name: Build project
-              run: cd github_actions && npm run build
+              run: npm run build
 
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                folder: github_actions/build 
+                folder: ./build 
 
             - name: List files (debug)
               run: ls -la
