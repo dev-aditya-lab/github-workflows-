@@ -12,23 +12,22 @@ jobs:
     build_and_deploy:
         runs-on: ubuntu-latest
 
-
         steps:
-            - name: chackout repo
+            - name: Checkout repo
               uses: actions/checkout@v3
 
-            - name: Setup Node js
+            - name: Setup Node.js
               uses: actions/setup-node@v3
               with:
-                  node-version: 22
+                  node-version: 16
             
-            - name: install dependencies
+            - name: Install dependencies
               run: npm install
             
             - name: Build project
               run: npm run build
 
-            - name: deploy to github pages
+            - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                 branch: gh-pages
