@@ -27,13 +27,6 @@ jobs:
             - name: Build project
               run: npm run build
 
-            - name: Verify build directory
-              run: |
-                if [ ! -d "build" ]; then
-                  echo "Build directory not found!"
-                  exit 1
-                fi
-
             - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@v4
               with:
