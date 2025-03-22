@@ -27,11 +27,10 @@ jobs:
             - name: Build project
               run: npm run build
 
+            - name: Debug Build Output
+              run: ls -la
+
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                folder: ./build 
-
-            - name: List files (debug)
-              run: ls -la
-              
+                folder: build   # Ensure this matches the actual build output
