@@ -33,4 +33,4 @@ jobs:
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                folder: build   # Ensure this matches the actual build output
+                folder: dist   # Ensure this matches the actual build output
